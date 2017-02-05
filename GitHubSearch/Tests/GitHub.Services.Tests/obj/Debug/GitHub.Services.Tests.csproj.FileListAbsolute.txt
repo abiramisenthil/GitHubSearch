@@ -1,0 +1,14 @@
+C:\GitHubSearch.Web\Tests\GitHub.Services.Tests\bin\Debug\GitHub.Services.Tests.dll.config
+C:\GitHubSearch.Web\Tests\GitHub.Services.Tests\bin\Debug\GitHub.Services.Tests.dll
+C:\GitHubSearch.Web\Tests\GitHub.Services.Tests\bin\Debug\GitHub.Services.Tests.pdb
+C:\GitHubSearch.Web\Tests\GitHub.Services.Tests\bin\Debug\Castle.Core.dll
+C:\GitHubSearch.Web\Tests\GitHub.Services.Tests\bin\Debug\GitHub.Services.dll
+C:\GitHubSearch.Web\Tests\GitHub.Services.Tests\bin\Debug\Moq.dll
+C:\GitHubSearch.Web\Tests\GitHub.Services.Tests\bin\Debug\Newtonsoft.Json.dll
+C:\GitHubSearch.Web\Tests\GitHub.Services.Tests\bin\Debug\GitHub.Services.pdb
+C:\GitHubSearch.Web\Tests\GitHub.Services.Tests\bin\Debug\Castle.Core.xml
+C:\GitHubSearch.Web\Tests\GitHub.Services.Tests\bin\Debug\Moq.xml
+C:\GitHubSearch.Web\Tests\GitHub.Services.Tests\bin\Debug\Newtonsoft.Json.xml
+C:\GitHubSearch.Web\Tests\GitHub.Services.Tests\obj\Debug\GitHub.Services.Tests.csprojResolveAssemblyReference.cache
+C:\GitHubSearch.Web\Tests\GitHub.Services.Tests\obj\Debug\GitHub.Services.Tests.dll
+C:\GitHubSearch.Web\Tests\GitHub.Services.Tests\obj\Debug\GitHub.Services.Tests.pdb

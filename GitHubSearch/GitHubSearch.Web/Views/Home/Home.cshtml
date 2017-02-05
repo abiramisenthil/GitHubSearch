@@ -1,0 +1,97 @@
+﻿@{
+    Layout = null;
+}
+@*@{
+    var message = "";
+    Validation.RequireField("username", "Username is required");
+     if (IsPost)  {
+        // Before processing anything, make sure that all user input is valid.
+         if (Validation.IsValid())
+         {
+             var username = Request["username"];
+         }
+     }
+
+ }*@
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Home</title>
+    <style>
+        htm,body {
+            margin: 0px;
+            padding: 0px;
+            /*height: 100%;*/
+            /*height: 100vh;*/
+        }
+        body {
+            /*min-height: 100vh;*/
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+        }
+
+        /*.wrapper {
+            width: 100%;
+            text-align: center;
+            height: 100%;
+            /*padding-top:100px;
+        }*/
+
+        .container {
+            margin: 0 auto;
+            width: 600px;
+
+            border: 1px solid #f7f2dd;
+            background-color: #fffdea;
+            padding: 20px;
+            text-align: center;
+            font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+        }
+        .container label {
+            font-size: 14px;
+            margin-right:10px;
+        }
+            .container input {
+            border-radius: 4px;
+            min-height: 27px;
+            padding: 0px 0px 0px 8px;
+            font-size: 14px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+        }
+     .container input[type="button"], .container input[type="submit"], button {
+                    background-color: #5e5e5e;
+                    display: inline-block;
+                    padding: 8px 12px;
+                    margin: 0;
+                    border-radius: 4px;
+                    color: #FFFFFF;
+                    font-size: 14px;
+                    font-weight: bold;
+                    text-shadow: 0 1px 1px #70A7E0;
+                }
+    </style>
+</head>
+<body>
+    @using (Html.BeginForm("GetUserDetails", "Home"))
+    {
+
+            <div class="container">
+                <h2>GitHub API call using C# coding</h2>
+                <br />
+                <br />
+
+                <label><b>Enter Name </b></label><input type="text" placeholder="Enter username" name="txtUsername" id="txtUsername" />
+                <br />
+                <br />
+                <input type="submit" value="Submit" />
+            </div>
+
+    }
+</body>
+</html>

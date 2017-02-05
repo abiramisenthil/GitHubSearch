@@ -1,0 +1,126 @@
+﻿@{
+    Layout = null;
+}
+@*@Model UserDetails*@
+@*@Model GitHub.Services.Model.GitHubUserInformationResponse;*@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>UserDetails</title>
+    <style>
+        html, body {
+            margin: 0px;
+            padding: 0px;
+
+        }
+
+        .wrapper {
+            width: 100%;
+            text-align: center;
+            /*padding-top: 100px;*/
+        }
+
+        .container {
+            margin: 0 auto;
+            width: 600px;
+            border: 1px solid #f7f2dd;
+            background-color: #fffdea;
+            padding: 20px;
+            text-align: left;
+            font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+        }
+
+            .container label {
+                font-size: 12px;
+                margin-right: 10px;
+            }
+
+            .container input {
+                border-radius: 4px;
+                min-height: 27px;
+                padding: 0px 0px 0px 8px;
+                font-size: 12px;
+                background-color: #fff;
+                border: 1px solid #ccc;
+            }
+
+                .container input[type="button"], .container input[type="submit"], button {
+                    background-color: #5e5e5e;
+                    display: inline-block;
+                    padding: 8px 12px;
+                    margin: 0;
+                    border-radius: 4px;
+                    color: #FFFFFF;
+                    font-size: 14px;
+                    font-weight: bold;
+                    text-shadow: 0 1px 1px #70A7E0;
+                }
+        .container table tr td{
+            font-size:12px;
+            padding:5px;
+        }
+        img {
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 5px;
+            width: 150px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+
+        <div class="container">            
+            @if (string.IsNullOrEmpty(Model.ErrorMessage))
+            {
+                <h2>User Details for the given Username</h2>
+            <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
+                <thead>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><b>UserName</b></td>
+                        <td>@Model.UserName</td>
+                    </tr>
+                    <tr>
+                        <td><b>Location</b></td>
+                        <td>@Model.Location</td>
+                    </tr>
+                    <tr>
+                        <td><b>Avathar</b></td>
+                        <td><img src="@Url.Content(@Model.AvatarURL)" alt="" /></td>
+                    </tr>
+                    <tr>
+                        <td><b>stargazers_count</b></td>
+                        <td><b>First Five hightest count</b></td>
+                    </tr>
+
+                    @if (Model.RepositoryDetails != null)
+                    {
+                        foreach (var item in @Model.RepositoryDetails)
+                        {
+                                <tr>
+                                <td></td>
+                                <td>@item.stargazers_count</td>
+                                </tr>
+                        }
+
+                    }
+                    <tr>
+                        <td colspan="2"><a href="~/Home">Click Here to Go Back</a></td>
+                    </tr>
+                </tbody>
+            </table>
+            }
+            else
+            {
+                <h2>User Details for the given Username: @Model.UserName</h2>
+                <h4>@Model.ErrorMessage</h4>
+                 <a href="~/Home">Click Here to Go Back</a>
+            }
+        </div>
+    </div>
+</body>
+</html>
